@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<!-- Meta, title -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>WebSocket Client</title>
+
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,400italic,500,600,700,700,800,900italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css'/>
+		<link href='https://fonts.googleapis.com/css?family=ABeeZee:100,200,300,400,400italic,500,600,700,700,800,900italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css'/>
+
+		<!-- CSS -->
+		<link rel='stylesheet' href='css/bootstrap.css' type='text/css'/>
+		<link rel='stylesheet' href='css/style.css' type='text/css'/>
+
+	</head>
+
+<body>
+
+<section id="after-intro" class="page-wrapper light-bg">
+  <div class="container">
+    <div class="row page-content article">
+      <h2>Websocket Client</h2>
+
+        <div id="echo">
+          <div id="echo-config" style="float: none;">
+            <strong>Location:</strong><br>
+            <input class="draw-border" id="wsUri" size="35">
+            <br>
+            <input class="draw-border echo-checkbox" type="checkbox" id="secureCb" onClick="toggleTls();">
+            <span id="secureCbLabel" style="font-size: smaller; color: black;">Use secure WebSocket (TLS)</span><br>
+            <button class="echo-button" id="connect">Connect</button>
+            <button class="echo-button" id="disconnect">Disconnect</button>
+            <br>
+            <br>
+            <strong>Message:</strong><br>
+            <input class="draw-border" id="sendMessage" size="35" value="">
+            <br>
+            <button class="echo-button" id="send" class="wsButton">Send</button>
+          </div>
+          <br>
+          <div id="echo-log" style="width: 350px;">
+            <strong>Log:</strong>
+            <div id="consoleLog"></div>
+            <button class="echo-button" id="clearLogBut" style="position: relative; top: 3px;">Clear log</button>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/SQLitePlugin.js"></script>
+<script src='js/index.js'></script>
+
+</body>
+</html>
